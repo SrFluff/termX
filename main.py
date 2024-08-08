@@ -1,4 +1,5 @@
 import os
+import files
 
 def cls():
 
@@ -6,7 +7,6 @@ def cls():
 
 root = ['2024']
 ttf = ['august']
-aug = ['8.txt']
 cd = root
 pwd = '/'
 
@@ -29,6 +29,10 @@ while main:
             cls()
             exit()
 
+        elif a == "clear":
+
+            cls()
+
         elif a == "cd 2024" and cd == root:
 
             cd = ttf
@@ -41,11 +45,13 @@ while main:
 
         elif a == "cd august" and cd == ttf:
 
-            cd = aug
+            cd = files.aug
             pwd = "/2024/august"
 
-        elif a == "cat 8" and cd == aug:
+        elif a == "cat 8" and cd == files.aug:
 
-            print("First log, you should get")
-            print("some sleep buddy. You can")
-            print("upload and finish :)")
+            print(files.eight)
+
+        elif a == "cat 9" and cd == files.aug:
+
+            print(files.nine)
